@@ -1,2 +1,1 @@
-config ZMK_USB
-	default "enable"
+CONFIG_ZMK_USB=y
