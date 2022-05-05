@@ -26,3 +26,4 @@ kscan0: kscan_0 {
 	, <7 0 &gpio1 12  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
 };
+};
