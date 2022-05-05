@@ -27,32 +27,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_z {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp Z>;
-        };
-        combo_b {
-            timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&kp B>;
-        };
-
-        combo_y {
-            timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp Y>;
-        };
-
-        combo_slash {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&kp SLASH>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,7 +44,7 @@
             bindings = <
                 &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp UARW &kp PG_UP  &trans
                 &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW &kp RARW   &trans
-                           &trans     &trans      &trans                                        &kp END        &trans   &kp PG_DN  &trans &trans
+                           &trans     &trans      &trans                                        &kp END        &trans   &kp PG_DN  &trans &trans &trans &trans
                                                   &trans          &trans       &kp ESC          &kp DEL
             >;
         };
@@ -80,7 +54,7 @@
             bindings = <
                 &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
                 &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                           &kp N1     &kp N2      &kp N3                                        &trans         &trans      &trans	  &trans &trans
+                           &kp N1     &kp N2      &kp N3                                        &trans         &trans      &trans	  &trans &trans &trans &trans
                                                   &kp N0          &kp MINUS     &trans          &trans
             >;
         };
@@ -90,7 +64,7 @@
             bindings = <
                 &kp LBRC   &kp LS(N7) &kp LS(N8)  &kp LS(N9)      &kp RBRC      &trans          &trans         &trans      &trans     &trans
                 &kp COLON  &kp LS(N4) &kp LS(N5)  &kp LS(N6)      &kp PLUS      &trans          &trans         &trans      &trans     &trans
-                           &kp LS(N1) &kp LS(N2)  &kp LS(N3)                                    &trans         &trans      &trans	  &trans &trans
+                           &kp LS(N1) &kp LS(N2)  &kp LS(N3)                                    &trans         &trans      &trans	  &trans &trans &trans &trans
                                                   &kp LS(N0)      &kp UNDER     &trans          &trans
             >;
         };
