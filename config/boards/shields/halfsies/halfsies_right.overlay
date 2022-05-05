@@ -7,35 +7,26 @@
 #include "halfsies.dtsi"
 
 &default_transform {
-	col-offset = <17>;
+	col-offset = <5>;
 };
 
-#include "halfsies.dtsi"
-
-&kscan_faceup {
-	input-gpios
-	= <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+kscan0: kscan_0 {
+	compatible = "zmk,kscan-gpio-matrix";
+	label = "KSCAN";
+	diode-direction = "col2row";
+	
+	col-gpios
+	= <2 0 &gpio0 28 0 (GPIO_ACTIVE_HIGH)>
+	, <3 0 &gpio0 29 0 (GPIO_ACTIVE_HIGH)>
+	, <4 0 &gpio0 4  0 (GPIO_ACTIVE_HIGH)>
+	, <5 0 &gpio0 5  0 (GPIO_ACTIVE_HIGH)>
+	, <6 0 &gpio0 11 0 (GPIO_ACTIVE_HIGH)>
 	;
-};
 
-&kscan_facedown {
-	input-gpios
-	= <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-	, <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+	row-gpios
+	= <10 0 &gpio1 15 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <9 0 &gpio1 14  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <8 0 &gpio1 13  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <7 0 &gpio1 12  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
 };
