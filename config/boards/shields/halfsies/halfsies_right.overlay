@@ -16,18 +16,18 @@ kscan0: kscan_0 {
 	diode-direction = "col2row";
 	
 	col-gpios
-	= <2 0 &gpio0 28 0 (GPIO_ACTIVE_HIGH)>
-	, <3 0 &gpio0 29 0 (GPIO_ACTIVE_HIGH)>
-	, <4 0 &gpio0 4  0 (GPIO_ACTIVE_HIGH)>
-	, <5 0 &gpio0 5  0 (GPIO_ACTIVE_HIGH)>
-	, <6 0 &gpio0 11 0 (GPIO_ACTIVE_HIGH)>
+	= <&gpio0 28 GPIO_ACTIVE_HIGH>
+	, <&gpio0 29 GPIO_ACTIVE_HIGH>
+	, <&gpio0 4  GPIO_ACTIVE_HIGH>
+	, <&gpio0 5  GPIO_ACTIVE_HIGH>
+	, <&gpio0 11 GPIO_ACTIVE_HIGH>
 	;
 
 	row-gpios
-	= <10 0 &gpio1 15 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <9 0 &gpio1 14  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <8 0 &gpio1 13  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <7 0 &gpio1 12  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	= <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+	, <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
 };
 };
