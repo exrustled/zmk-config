@@ -6,14 +6,15 @@
 
 #include "halfsies.dtsi"
 
+default_transform {
+	col-offset = <5>;
+};
+
 kscan0: kscan_0 {
 	compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN";
 	diode-direction = "col2row";
-
-default_transform 
-	col-offset = <5>;
-;	
+	
 	col-gpios
 	= <&gpio0 28 GPIO_ACTIVE_HIGH>
 	, <&gpio0 29 GPIO_ACTIVE_HIGH>
