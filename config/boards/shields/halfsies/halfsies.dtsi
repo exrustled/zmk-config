@@ -23,3 +23,18 @@
 			                           RC(3,0)  RC(3,1)		RC(3,2)  RC(3,3)
 		>;
 	};
+	
+	kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+
+        diode-direction = "col2row";
+        row-gpios
+            = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // qdrwbjfup' row
+            , <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ashtgyneoi row
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // zxcmvkl,./ row
+            , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // thumblayer row
+            ;
+
+    };
+};
